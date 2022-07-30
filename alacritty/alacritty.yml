@@ -1,0 +1,122 @@
+#================================================================================#
+#                                                                                #
+#    ______   __                                __    __      __                 #
+#   /      \ /  |                              /  |  /  |    /  |                #
+#  /$$$$$$  |$$ |  ______    _______   ______  $$/  _$$ |_  _$$ |_    __    __   #
+#  $$ |__$$ |$$ | /      \  /       | /      \ /  |/ $$   |/ $$   |  /  |  /  |  #
+#  $$    $$ |$$ | $$$$$$  |/$$$$$$$/ /$$$$$$  |$$ |$$$$$$/ $$$$$$/   $$ |  $$ |  #
+#  $$$$$$$$ |$$ | /    $$ |$$ |      $$ |  $$/ $$ |  $$ | __ $$ | __ $$ |  $$ |  #
+#  $$ |  $$ |$$ |/$$$$$$$ |$$ \_____ $$ |      $$ |  $$ |/  |$$ |/  |$$ \__$$ |  #
+#  $$ |  $$ |$$ |$$    $$ |$$       |$$ |      $$ |  $$  $$/ $$  $$/ $$    $$ |  #
+#  $$/   $$/ $$/  $$$$$$$/  $$$$$$$/ $$/       $$/    $$$$/   $$$$/   $$$$$$$ |  #
+#                                                                    /  \__$$ |  #
+#                                                                    $$    $$/   # 
+#                                                                     $$$$$$/    #
+#                                                                                #
+#=================================================================================
+
+
+#===============================================#
+#                                               #
+#       Customization of Alacritty window       #
+#                                               #
+#===============================================#
+
+window:
+  padding:
+    x: 30
+    y: 30
+  decorations: none
+  opacity: 0.90
+
+
+#===============================================#
+#                                               #
+#     Customization of Alacritty scrolling      #
+#                                               #
+#===============================================#
+scrolling:
+  history: 10000
+  multiplier: 10
+
+
+#==========================================#
+#                                          #
+#     Customization of Alacritty font      #
+#                                          #
+#==========================================#
+font:
+  normal:
+    family: JetBrainsMono Nerd Font
+    style: Regular
+  bold:
+    family: JetBrainsMono Nerd Font
+    style: Bold
+  italic:
+    family: JetBrainsMono Nerd Font
+    style: Italic
+  bold_italic:
+    family: JetBrainsMono Nerd Font
+    style: Bold Italic
+  size: 12.0
+  offset:
+    x: 0
+    y: 0
+draw_bold_text_with_bright_colors: true
+
+
+#=================================================#
+#                                                 #
+#     Customization of Alacritty colorscheme      #
+#                                                 #
+#=================================================#
+schemes:
+  TomorrowNight: &TomorrowNight
+    primary:
+      background: '#1d1f21'
+      foreground: '#c5c8c6'
+    cursor:
+      text: '#1d1f21'
+      cursor: '#ffffff'
+    normal:
+      black: '#1d1f21'
+      red: '#cc6666'
+      green: '#b5bd68'
+      yellow: '#e6c547'
+      blue: '#81a2be'
+      magenta: '#b294bb'
+      cyan: '#70c0ba'
+      white: '#373b41'
+    bright:
+      black: '#666666'
+      red: '#ff3334'
+      green: '#9ec400'
+      yellow: '#f0c674'
+      blue: '#81a2be'
+      magenta: '#b77ee0'
+      cyan: '#54ced6'
+      white: '#282a2e'
+colors: *TomorrowNight
+
+
+#===========================================#
+#                                           #
+#     Customization of Alacritty cursor     #
+#                                           #
+#===========================================#
+cursor:
+  style: Beam
+
+
+#=============================================#
+#                                             #
+#     Customization of Alacritty bindings     #
+#                                             #
+#=============================================#
+key_bindings:
+  - { key: V,           mods: Control,            action: Paste }
+  - { key: C,           mods: Control,            action: Copy  }
+  - { key: Plus,        mods: Control,            action: IncreaseFontSize}
+  - { key: Equals,       mods: Control,            action: IncreaseFontSize}
+  - { key: Minus,       mods: Control,            action: DecreaseFontSize}
+  - { key: F11,         mods: None,               action: ToggleFullScreen}
